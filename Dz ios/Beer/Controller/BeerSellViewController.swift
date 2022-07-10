@@ -21,10 +21,15 @@ class BeerSellViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stepper.stepValue = 1.0
-        background.image = UIImage(named: Bartender.shared.getBeer()[beerIndex!].background)
-        beerImage.image = UIImage(named: Bartender.shared.getBeer()[beerIndex!].image)
-        name.text = Bartender.shared.getBeer()[beerIndex!].name
+        setGradient(view: self.view)
+        
+        if let beerIndex = beerIndex {
+            stepper.stepValue = 1.0
+            background.image = UIImage(named: Bartender.shared.getBeer()[beerIndex].background)
+            beerImage.image = UIImage(named: Bartender.shared.getBeer()[beerIndex].image)
+            name.text = Bartender.shared.getBeer()[beerIndex].name
+        }
+        
         
     }
     @IBAction func stepered(_ sender: UIStepper) {
@@ -32,11 +37,19 @@ class BeerSellViewController: UIViewController {
     }
     
     @IBAction func sellButtonPressed(_ sender: Any) {
-        if Bartender.shared.getBeer()[beerIndex!].count >= Int(number.text!)! {
-            Bartender.shared.sellBeer(count: Int(number.text!)!, index: beerIndex!)
-            Bartender.shared.putTheProceeds(cost: Bartender.shared.getBeer()[beerIndex!].price, count: Int(number.text!)!)
-            navigationController?.popViewController(animated: true)
+        if let beerIndex = beerIndex {
+            if Bartender.shared.getBeer()[beerIndex].count >= Int(number.text!)! {
+                Bartender.shared.sellBeer(count: Int(number.text!)!, index: beerIndex)
+                Bartender.shared.putTheProceeds(cost: Bartender.shared.getBeer()[beerIndex].price, count: Int(number.text!)!)
+                navigationController?.popViewController(animated: true)
+            } else {
+                let alertController = UIAlertController(title: "У вас нет столько пива", message: nil, preferredStyle: .alert)
+                let action = UIAlertAction(title: "ok", style: .default)
+                alertController.addAction(action)
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
+        
         
     }
     

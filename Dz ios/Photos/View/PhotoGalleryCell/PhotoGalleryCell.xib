@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="PhotoGalleryCell" customModule="Dz_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="295" height="455"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="295" height="455"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM3-Ba-0JS">
+                        <rect key="frame" x="20" y="50" width="255" height="143.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="YM3-Ba-0JS" secondAttribute="height" multiplier="16:9" id="FiE-n6-khS"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ock-c0-M58">
+                        <rect key="frame" x="211" y="198.5" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Ock-c0-M58" secondAttribute="height" multiplier="1:1" id="2Iz-PQ-5yb"/>
+                        </constraints>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system">
+                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="likePressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="K5w-Xu-EcB"/>
+                        </connections>
+                    </button>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Tk-NN-hOk">
+                        <rect key="frame" x="0.0" y="267.5" width="295" height="187.5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </tableView>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GNM-fg-ddf">
+                        <rect key="frame" x="20" y="213.5" width="181" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="textFieldShouldChange:" destination="gTV-IL-0wX" eventType="editingChanged" id="PIA-Qm-yMF"/>
+                        </connections>
+                    </textField>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="GNM-fg-ddf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="1Xb-de-7kZ"/>
+                <constraint firstItem="Ock-c0-M58" firstAttribute="top" secondItem="YM3-Ba-0JS" secondAttribute="bottom" constant="5" id="Ajz-Qc-l5B"/>
+                <constraint firstItem="9Tk-NN-hOk" firstAttribute="top" secondItem="Ock-c0-M58" secondAttribute="bottom" constant="5" id="PLQ-gI-F5b"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="Ock-c0-M58" secondAttribute="trailing" constant="20" id="PLx-OD-tNv"/>
+                <constraint firstItem="YM3-Ba-0JS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="QYp-16-VhA"/>
+                <constraint firstItem="9Tk-NN-hOk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Tae-g3-xeD"/>
+                <constraint firstItem="9Tk-NN-hOk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GNM-fg-ddf" secondAttribute="bottom" constant="20" id="VlS-4S-P4N"/>
+                <constraint firstAttribute="trailing" secondItem="9Tk-NN-hOk" secondAttribute="trailing" id="Wca-6f-MaQ"/>
+                <constraint firstItem="Ock-c0-M58" firstAttribute="leading" secondItem="GNM-fg-ddf" secondAttribute="trailing" constant="10" id="XOy-CS-mMf"/>
+                <constraint firstAttribute="trailing" secondItem="YM3-Ba-0JS" secondAttribute="trailing" constant="20" id="lLH-wR-9P2"/>
+                <constraint firstAttribute="bottom" secondItem="9Tk-NN-hOk" secondAttribute="bottom" id="lzc-4p-329"/>
+                <constraint firstItem="GNM-fg-ddf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YM3-Ba-0JS" secondAttribute="bottom" constant="20" id="m5H-Vf-hoE"/>
+                <constraint firstItem="YM3-Ba-0JS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="50" id="xuK-QH-pNg"/>
+            </constraints>
+            <size key="customSize" width="295" height="455"/>
+            <connections>
+                <outlet property="likeButton" destination="Ock-c0-M58" id="63v-F2-0TQ"/>
+                <outlet property="photoView" destination="YM3-Ba-0JS" id="6ZI-Lc-H7q"/>
+                <outlet property="tableView" destination="9Tk-NN-hOk" id="wTr-Zr-gfU"/>
+                <outlet property="textField" destination="GNM-fg-ddf" id="4TZ-cE-Ao0"/>
+            </connections>
+            <point key="canvasLocation" x="181.8840579710145" y="137.61160714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GalleryView" customModule="Dz_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="commentButton" destination="0Yr-qr-ujk" id="V8l-Wp-0En"/>
+                <outlet property="contentView" destination="Yp9-0b-Kn1" id="H81-Kc-PbR"/>
+                <outlet property="image" destination="PH9-ql-GHx" id="6vW-Pp-zKD"/>
+                <outlet property="likeButton" destination="8XL-nX-6qH" id="Xbt-La-1iQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yp9-0b-Kn1" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="0.0" width="376" height="300"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PH9-ql-GHx">
+                            <rect key="frame" x="0.0" y="0.0" width="376" height="211.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="PH9-ql-GHx" secondAttribute="height" multiplier="16:9" id="UhS-Rj-s7M"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XL-nX-6qH">
+                            <rect key="frame" x="302" y="211.5" width="74" height="74"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="8XL-nX-6qH" secondAttribute="height" id="hzv-ZA-7pw"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="likePressed:" destination="-1" eventType="touchUpInside" id="Gk5-Vu-Iyi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Yr-qr-ujk">
+                            <rect key="frame" x="228" y="211.5" width="74" height="74"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="bubble.right.fill" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="commentPressed:" destination="-1" eventType="touchUpInside" id="Abn-yZ-a5l"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="0Yr-qr-ujk" firstAttribute="width" secondItem="8XL-nX-6qH" secondAttribute="width" id="1hx-i5-hj7"/>
+                        <constraint firstItem="0Yr-qr-ujk" firstAttribute="height" secondItem="8XL-nX-6qH" secondAttribute="height" id="I3c-Mz-Bn9"/>
+                        <constraint firstAttribute="trailing" secondItem="PH9-ql-GHx" secondAttribute="trailing" id="Vmq-6r-r3s"/>
+                        <constraint firstItem="8XL-nX-6qH" firstAttribute="top" secondItem="PH9-ql-GHx" secondAttribute="bottom" id="ZSp-cH-Woj"/>
+                        <constraint firstItem="0Yr-qr-ujk" firstAttribute="top" secondItem="PH9-ql-GHx" secondAttribute="bottom" id="bah-LG-hc8"/>
+                        <constraint firstItem="PH9-ql-GHx" firstAttribute="leading" secondItem="Yp9-0b-Kn1" secondAttribute="leading" id="eKm-hZ-gSY"/>
+                        <constraint firstAttribute="trailing" secondItem="8XL-nX-6qH" secondAttribute="trailing" id="hyf-EM-rgB"/>
+                        <constraint firstItem="PH9-ql-GHx" firstAttribute="top" secondItem="Yp9-0b-Kn1" secondAttribute="top" id="qNN-eC-lvN"/>
+                        <constraint firstItem="8XL-nX-6qH" firstAttribute="leading" secondItem="0Yr-qr-ujk" secondAttribute="trailing" id="rb5-9k-eYF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Yp9-0b-Kn1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Hzv-Mx-udt"/>
+                <constraint firstAttribute="trailing" secondItem="Yp9-0b-Kn1" secondAttribute="trailing" id="LXG-aq-ao1"/>
+                <constraint firstItem="Yp9-0b-Kn1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="i3x-Do-bFQ"/>
+                <constraint firstAttribute="bottom" secondItem="Yp9-0b-Kn1" secondAttribute="bottom" id="v7b-GO-sJk"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="168.11594202898553" y="203.57142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bubble.right.fill" catalog="system" width="128" height="110"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

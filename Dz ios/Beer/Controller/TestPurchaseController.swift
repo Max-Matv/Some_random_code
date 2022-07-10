@@ -25,8 +25,10 @@ class TestPurchaseController: UIViewController {
 
     
     @IBAction func nexPressed(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "dzThree")
-        self.navigationController?.pushViewController(vc!, animated: true)
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "dzThree") {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
     
 
@@ -47,13 +49,15 @@ extension TestPurchaseController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! TestPurchaseCell
-        let value = cell.beerCount.text
-        let beer = beerList[indexPath.row]
-        beer.count = Int(value!)!
-        Bartender.shared.addBeer(beer)
-        beerList.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
+        if let cell = tableView.cellForRow(at: indexPath) as? TestPurchaseCell {
+            let value = cell.beerCount.text
+            let beer = beerList[indexPath.row]
+            beer.count = Int(value!)!
+            Bartender.shared.addBeer(beer)
+            beerList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        
     }
     
 }

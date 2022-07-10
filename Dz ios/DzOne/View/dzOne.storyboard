@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dz One Controller-->
+        <scene sceneID="TX7-y7-3Fs">
+            <objects>
+                <viewController storyboardIdentifier="dzOne" id="xPJ-wY-qlr" customClass="DzOneController" customModule="Dz_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bIx-F9-Kdu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="MPf-Tg-Hbm">
+                                <rect key="frame" x="20" y="228.5" width="374" height="105.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="88"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHX-gm-AM1" userLabel="Container">
+                                <rect key="frame" x="5" y="359.5" width="404" height="503.5"/>
+                                <subviews>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOh-Yi-WDy" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="105" y="204.5" width="94.5" height="94.5"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="5">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="34V-4D-Pr0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZX-c9-XQj" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="204.5" y="204.5" width="95" height="94.5"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="6">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="x7h-vT-VEy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qo-gm-Itf" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="304.5" y="204.5" width="94.5" height="94.5"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="x">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operandButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="pIC-bI-vM9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wO-no-AIj" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="204.5" y="304" width="95" height="95"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="3">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="7zw-17-0FS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1U-jf-Khx" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="304.5" y="304" width="94.5" height="95"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="/">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operandButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="FdP-vw-k3M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXN-Ov-DtI" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="404" width="194.5" height="90"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="6u3-HA-gD0"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="LLd-90-Ihl"/>
+                                            <constraint firstAttribute="height" priority="999" constant="90" id="dDq-ze-RPY"/>
+                                            <constraint firstAttribute="width" priority="999" constant="185" id="xjU-YY-uJo"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="0">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="jLq-Zg-ANC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWO-OS-PFR" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="204.5" y="404" width="95" height="94.5"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=".">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dotButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="GeF-Lo-iVD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aap-AW-jJB" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="304.5" y="404" width="94.5" height="94.5"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="=">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="equalButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="R78-Wl-Q1f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW3-2Y-dyb" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="5" width="95" height="94.5"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="height" multiplier="1:1" id="Ptn-4J-lFP"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="C">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clearButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="WBr-bX-FEz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNV-wu-l2C" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="105" y="5" width="94.5" height="94.5"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="+/-">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="plusMinusButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="EwW-tz-CIa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVa-wn-DhG" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="204.5" y="5" width="95" height="94.5"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="%">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="percentPressed:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="sDR-lm-evV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kQ-jQ-Ysk" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="304.5" y="5" width="94.5" height="94.5"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="+">
+                                            <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operandButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="POc-hC-SiV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vx2-sA-nvL" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="104.5" width="95" height="95"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="7">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="NKF-Fb-Q1q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1x-Oc-xvX" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="204.5" y="104.5" width="95" height="95"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="9">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="RkB-S4-KZj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwk-EQ-Z9W" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="304.5" y="104.5" width="94.5" height="95"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="-">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operandButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="1nW-lg-R32"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66n-gE-xkM" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="204.5" width="95" height="94.5"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="4">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="Bf5-c8-rEV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3a4-kG-j41" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="304" width="95" height="95"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="1">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="chE-3b-M1X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKP-86-S49" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="105" y="304" width="94.5" height="95"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="2">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="87G-wp-Mbr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsq-mw-VDW" customClass="RoundButton" customModule="Dz_ios" customModuleProvider="target">
+                                        <rect key="frame" x="105" y="104.5" width="94.5" height="95"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="8">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressButton:" destination="xPJ-wY-qlr" eventType="touchUpInside" id="ynp-Nx-T2i"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jsq-mw-VDW" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="0rS-ce-QGf"/>
+                                    <constraint firstItem="Wwk-EQ-Z9W" firstAttribute="top" secondItem="5kQ-jQ-Ysk" secondAttribute="bottom" constant="5" id="1S7-vg-BAs"/>
+                                    <constraint firstItem="GNV-wu-l2C" firstAttribute="leading" secondItem="jW3-2Y-dyb" secondAttribute="trailing" constant="5" id="3fq-I2-IXV"/>
+                                    <constraint firstItem="aap-AW-jJB" firstAttribute="leading" secondItem="wWO-OS-PFR" secondAttribute="trailing" constant="5" id="53K-s2-Euh"/>
+                                    <constraint firstItem="8wO-no-AIj" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="5qB-LA-GCg"/>
+                                    <constraint firstItem="L1U-jf-Khx" firstAttribute="top" secondItem="5qo-gm-Itf" secondAttribute="bottom" constant="5" id="6hY-dQ-U4f"/>
+                                    <constraint firstItem="jsq-mw-VDW" firstAttribute="top" secondItem="GNV-wu-l2C" secondAttribute="bottom" constant="5" id="6ig-Tk-ayw"/>
+                                    <constraint firstItem="mXN-Ov-DtI" firstAttribute="top" secondItem="oKP-86-S49" secondAttribute="bottom" constant="5" id="6xM-8S-vZr"/>
+                                    <constraint firstItem="mXN-Ov-DtI" firstAttribute="leading" secondItem="QHX-gm-AM1" secondAttribute="leading" constant="5" id="76Z-j1-3AG"/>
+                                    <constraint firstAttribute="trailing" secondItem="aap-AW-jJB" secondAttribute="trailing" constant="5" id="8OF-5T-xIe"/>
+                                    <constraint firstItem="8wO-no-AIj" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="8c4-Uq-H3W"/>
+                                    <constraint firstItem="oKP-86-S49" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="8xv-cr-Cyc"/>
+                                    <constraint firstItem="vx2-sA-nvL" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="942-Pr-fzQ"/>
+                                    <constraint firstItem="jsq-mw-VDW" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="9Ot-WO-4vx"/>
+                                    <constraint firstItem="5kQ-jQ-Ysk" firstAttribute="top" secondItem="QHX-gm-AM1" secondAttribute="top" constant="5" id="B0N-Ky-bpY"/>
+                                    <constraint firstItem="66n-gE-xkM" firstAttribute="leading" secondItem="QHX-gm-AM1" secondAttribute="leading" constant="5" id="Bes-Td-csg"/>
+                                    <constraint firstItem="GNV-wu-l2C" firstAttribute="top" secondItem="QHX-gm-AM1" secondAttribute="top" constant="5" id="Bp9-o8-jHi"/>
+                                    <constraint firstItem="GNV-wu-l2C" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="DIf-DB-uZK"/>
+                                    <constraint firstItem="wWO-OS-PFR" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="DLN-KO-fDX"/>
+                                    <constraint firstItem="vx2-sA-nvL" firstAttribute="top" secondItem="jW3-2Y-dyb" secondAttribute="bottom" constant="5" id="DTN-64-5Oq"/>
+                                    <constraint firstItem="oKP-86-S49" firstAttribute="top" secondItem="bOh-Yi-WDy" secondAttribute="bottom" constant="5" id="DTc-dS-DXE"/>
+                                    <constraint firstItem="jW3-2Y-dyb" firstAttribute="top" secondItem="QHX-gm-AM1" secondAttribute="top" constant="5" id="Df3-TR-Md7"/>
+                                    <constraint firstItem="yVa-wn-DhG" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="EYb-Fn-lMO"/>
+                                    <constraint firstItem="oKP-86-S49" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="HPn-L8-iHt"/>
+                                    <constraint firstItem="aap-AW-jJB" firstAttribute="top" secondItem="L1U-jf-Khx" secondAttribute="bottom" constant="5" id="I4r-8f-tAr"/>
+                                    <constraint firstItem="wWO-OS-PFR" firstAttribute="top" secondItem="8wO-no-AIj" secondAttribute="bottom" constant="5" id="JkL-OE-x5H"/>
+                                    <constraint firstItem="bOh-Yi-WDy" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="K5i-cw-akk"/>
+                                    <constraint firstItem="8wO-no-AIj" firstAttribute="leading" secondItem="oKP-86-S49" secondAttribute="trailing" constant="5" id="KLf-Fo-CzW"/>
+                                    <constraint firstItem="3a4-kG-j41" firstAttribute="leading" secondItem="QHX-gm-AM1" secondAttribute="leading" constant="5" id="LSi-Q0-hcN"/>
+                                    <constraint firstItem="GNV-wu-l2C" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="LuG-Yd-iXn"/>
+                                    <constraint firstAttribute="trailing" secondItem="5kQ-jQ-Ysk" secondAttribute="trailing" constant="5" id="MFj-dx-wnk"/>
+                                    <constraint firstItem="jW3-2Y-dyb" firstAttribute="leading" secondItem="QHX-gm-AM1" secondAttribute="leading" constant="5" id="O9p-jJ-1rh"/>
+                                    <constraint firstItem="bOh-Yi-WDy" firstAttribute="top" secondItem="jsq-mw-VDW" secondAttribute="bottom" constant="5" id="OR8-Lt-JrR"/>
+                                    <constraint firstItem="L1U-jf-Khx" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="OTU-R6-gRM"/>
+                                    <constraint firstItem="wWO-OS-PFR" firstAttribute="leading" secondItem="mXN-Ov-DtI" secondAttribute="trailing" constant="5" id="Po8-Ad-5Df"/>
+                                    <constraint firstItem="vx2-sA-nvL" firstAttribute="leading" secondItem="QHX-gm-AM1" secondAttribute="leading" constant="5" id="Q1E-IY-mJs"/>
+                                    <constraint firstItem="5qo-gm-Itf" firstAttribute="top" secondItem="Wwk-EQ-Z9W" secondAttribute="bottom" constant="5" id="QX8-eK-cxx"/>
+                                    <constraint firstAttribute="bottom" secondItem="aap-AW-jJB" secondAttribute="bottom" constant="5" id="Rbn-KV-nrt"/>
+                                    <constraint firstItem="3a4-kG-j41" firstAttribute="top" secondItem="66n-gE-xkM" secondAttribute="bottom" constant="5" id="SjG-Rv-cGN"/>
+                                    <constraint firstItem="Wwk-EQ-Z9W" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="T2r-yb-bkT"/>
+                                    <constraint firstItem="aap-AW-jJB" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="Uev-z6-O1u"/>
+                                    <constraint firstItem="5kQ-jQ-Ysk" firstAttribute="leading" secondItem="yVa-wn-DhG" secondAttribute="trailing" constant="5" id="V53-MJ-vcz"/>
+                                    <constraint firstItem="L1U-jf-Khx" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="VbR-uj-fPR"/>
+                                    <constraint firstItem="bOh-Yi-WDy" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="YWY-gA-EOl"/>
+                                    <constraint firstItem="vx2-sA-nvL" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="a5U-CM-OGM"/>
+                                    <constraint firstItem="66n-gE-xkM" firstAttribute="top" secondItem="vx2-sA-nvL" secondAttribute="bottom" constant="5" id="aHw-eH-jy8"/>
+                                    <constraint firstItem="X1x-Oc-xvX" firstAttribute="top" secondItem="yVa-wn-DhG" secondAttribute="bottom" constant="5" id="bBI-gm-jMy"/>
+                                    <constraint firstItem="Wwk-EQ-Z9W" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="bQN-D8-Qo0"/>
+                                    <constraint firstItem="5qo-gm-Itf" firstAttribute="leading" secondItem="yZX-c9-XQj" secondAttribute="trailing" constant="5" id="coB-rB-Cxn"/>
+                                    <constraint firstItem="X1x-Oc-xvX" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="dU6-Zy-bsB"/>
+                                    <constraint firstItem="wWO-OS-PFR" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="dUH-KE-U4U"/>
+                                    <constraint firstItem="5qo-gm-Itf" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="dng-Ew-ABK"/>
+                                    <constraint firstItem="yZX-c9-XQj" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="dv1-A4-0EJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="wWO-OS-PFR" secondAttribute="bottom" constant="5" id="ebh-MF-WUR"/>
+                                    <constraint firstItem="yVa-wn-DhG" firstAttribute="leading" secondItem="GNV-wu-l2C" secondAttribute="trailing" constant="5" id="emT-ls-wZd"/>
+                                    <constraint firstItem="yVa-wn-DhG" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="fOD-gK-OzR"/>
+                                    <constraint firstItem="3a4-kG-j41" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="fiA-ym-vYI"/>
+                                    <constraint firstItem="yZX-c9-XQj" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="g3c-6Q-TjN"/>
+                                    <constraint firstItem="5kQ-jQ-Ysk" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="gSt-gb-ihb"/>
+                                    <constraint firstItem="X1x-Oc-xvX" firstAttribute="leading" secondItem="jsq-mw-VDW" secondAttribute="trailing" constant="5" id="h2Q-FR-usz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wwk-EQ-Z9W" secondAttribute="trailing" constant="5" id="hfn-uX-OuD"/>
+                                    <constraint firstAttribute="trailing" secondItem="L1U-jf-Khx" secondAttribute="trailing" constant="5" id="iNx-B1-ddj"/>
+                                    <constraint firstAttribute="trailing" secondItem="5qo-gm-Itf" secondAttribute="trailing" constant="5" id="jKz-Ym-Zse"/>
+                                    <constraint firstItem="yZX-c9-XQj" firstAttribute="leading" secondItem="bOh-Yi-WDy" secondAttribute="trailing" constant="5" id="jYA-0h-mk7"/>
+                                    <constraint firstItem="L1U-jf-Khx" firstAttribute="leading" secondItem="8wO-no-AIj" secondAttribute="trailing" constant="5" id="jzc-TV-myL"/>
+                                    <constraint firstItem="bOh-Yi-WDy" firstAttribute="leading" secondItem="66n-gE-xkM" secondAttribute="trailing" constant="5" id="kBA-gI-b9x"/>
+                                    <constraint firstItem="oKP-86-S49" firstAttribute="leading" secondItem="3a4-kG-j41" secondAttribute="trailing" constant="5" id="n2m-HX-UnH"/>
+                                    <constraint firstItem="5qo-gm-Itf" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="n8G-vl-lAA"/>
+                                    <constraint firstItem="66n-gE-xkM" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="nCC-Ug-dBt"/>
+                                    <constraint firstItem="8wO-no-AIj" firstAttribute="top" secondItem="yZX-c9-XQj" secondAttribute="bottom" constant="5" id="nJO-9f-zd1"/>
+                                    <constraint firstItem="yZX-c9-XQj" firstAttribute="top" secondItem="X1x-Oc-xvX" secondAttribute="bottom" constant="5" id="nhH-44-UJF"/>
+                                    <constraint firstItem="3a4-kG-j41" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="nxr-1K-BKI"/>
+                                    <constraint firstItem="5kQ-jQ-Ysk" firstAttribute="width" secondItem="jW3-2Y-dyb" secondAttribute="width" id="pUj-v2-ExG"/>
+                                    <constraint firstItem="aap-AW-jJB" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="qOS-Bn-E1A"/>
+                                    <constraint firstItem="mXN-Ov-DtI" firstAttribute="top" secondItem="3a4-kG-j41" secondAttribute="bottom" constant="5" id="qYY-Yy-vGO"/>
+                                    <constraint firstItem="jsq-mw-VDW" firstAttribute="leading" secondItem="vx2-sA-nvL" secondAttribute="trailing" constant="5" id="rzs-4Y-gWu"/>
+                                    <constraint firstItem="X1x-Oc-xvX" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="uYQ-vR-SWI"/>
+                                    <constraint firstItem="66n-gE-xkM" firstAttribute="height" secondItem="jW3-2Y-dyb" secondAttribute="height" id="uxk-Qn-fGg"/>
+                                    <constraint firstItem="Wwk-EQ-Z9W" firstAttribute="leading" secondItem="X1x-Oc-xvX" secondAttribute="trailing" constant="5" id="wYe-Oe-7Sw"/>
+                                    <constraint firstItem="yVa-wn-DhG" firstAttribute="top" secondItem="QHX-gm-AM1" secondAttribute="top" constant="5" id="zgq-8Y-tZY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nbp-cA-Hfn"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="QHX-gm-AM1" firstAttribute="bottom" secondItem="Nbp-cA-Hfn" secondAttribute="bottom" constant="1" id="0MT-Ea-PGD"/>
+                            <constraint firstAttribute="bottom" secondItem="QHX-gm-AM1" secondAttribute="bottom" priority="999" constant="28" id="C0q-TP-dFw"/>
+                            <constraint firstItem="MPf-Tg-Hbm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Nbp-cA-Hfn" secondAttribute="top" constant="20" id="FRV-SR-Ey3"/>
+                            <constraint firstItem="QHX-gm-AM1" firstAttribute="top" secondItem="MPf-Tg-Hbm" secondAttribute="bottom" constant="25.5" id="NUD-nS-FUu"/>
+                            <constraint firstItem="QHX-gm-AM1" firstAttribute="leading" secondItem="Nbp-cA-Hfn" secondAttribute="leading" constant="5" id="RSu-Oo-6gb"/>
+                            <constraint firstItem="Nbp-cA-Hfn" firstAttribute="trailing" secondItem="QHX-gm-AM1" secondAttribute="trailing" priority="999" constant="10" id="YEK-NM-Gjj"/>
+                            <constraint firstItem="Nbp-cA-Hfn" firstAttribute="trailing" secondItem="MPf-Tg-Hbm" secondAttribute="trailing" constant="20" id="dMD-Vh-ODd"/>
+                            <constraint firstItem="Nbp-cA-Hfn" firstAttribute="trailing" secondItem="QHX-gm-AM1" secondAttribute="trailing" constant="5" id="mOR-zS-0tH"/>
+                            <constraint firstItem="MPf-Tg-Hbm" firstAttribute="leading" secondItem="Nbp-cA-Hfn" secondAttribute="leading" constant="20" id="syP-zI-A2R"/>
+                            <constraint firstItem="QHX-gm-AM1" firstAttribute="leading" secondItem="Nbp-cA-Hfn" secondAttribute="leading" priority="999" constant="10" id="wje-vy-FGO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="s8s-F9-xWX"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="MPf-Tg-Hbm" id="Ga3-Gh-qCI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aUj-Uh-pEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="-612.05357142857144"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="3a4-kG-j41">
+            <size key="intrinsicContentSize" width="37" height="47.5"/>
+        </designable>
+        <designable name="5kQ-jQ-Ysk">
+            <size key="intrinsicContentSize" width="41.5" height="47.5"/>
+        </designable>
+        <designable name="5qo-gm-Itf">
+            <size key="intrinsicContentSize" width="37.5" height="47.5"/>
+        </designable>
+        <designable name="66n-gE-xkM">
+            <size key="intrinsicContentSize" width="41.5" height="47.5"/>
+        </designable>
+        <designable name="8wO-no-AIj">
+            <size key="intrinsicContentSize" width="41" height="47.5"/>
+        </designable>
+        <designable name="GNV-wu-l2C">
+            <size key="intrinsicContentSize" width="62" height="47.5"/>
+        </designable>
+        <designable name="L1U-jf-Khx">
+            <size key="intrinsicContentSize" width="32.5" height="47.5"/>
+        </designable>
+        <designable name="Wwk-EQ-Z9W">
+            <size key="intrinsicContentSize" width="36.5" height="47.5"/>
+        </designable>
+        <designable name="X1x-Oc-xvX">
+            <size key="intrinsicContentSize" width="42" height="47.5"/>
+        </designable>
+        <designable name="aap-AW-jJB">
+            <size key="intrinsicContentSize" width="41.5" height="47.5"/>
+        </designable>
+        <designable name="bOh-Yi-WDy">
+            <size key="intrinsicContentSize" width="41" height="47.5"/>
+        </designable>
+        <designable name="jW3-2Y-dyb">
+            <size key="intrinsicContentSize" width="44" height="47.5"/>
+        </designable>
+        <designable name="jsq-mw-VDW">
+            <size key="intrinsicContentSize" width="41.5" height="47.5"/>
+        </designable>
+        <designable name="mXN-Ov-DtI">
+            <size key="intrinsicContentSize" width="41.5" height="47.5"/>
+        </designable>
+        <designable name="oKP-86-S49">
+            <size key="intrinsicContentSize" width="40.5" height="47.5"/>
+        </designable>
+        <designable name="vx2-sA-nvL">
+            <size key="intrinsicContentSize" width="40" height="47.5"/>
+        </designable>
+        <designable name="wWO-OS-PFR">
+            <size key="intrinsicContentSize" width="30.5" height="47.5"/>
+        </designable>
+        <designable name="yVa-wn-DhG">
+            <size key="intrinsicContentSize" width="47.5" height="47.5"/>
+        </designable>
+        <designable name="yZX-c9-XQj">
+            <size key="intrinsicContentSize" width="42" height="47.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

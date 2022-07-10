@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Gallery View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PhotoGallery" id="Y6W-OH-hqX" customClass="PhotoGalleryViewController" customModule="Dz_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUJ-yf-cFm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fpx-Ax-TLr" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" directionalLockEnabled="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rsp-iJ-Kpx">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="772"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="sTo-SS-fMC">
+                                                    <size key="itemSize" width="0.0" height="0.0"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuU-Gp-9sP">
+                                                <rect key="frame" x="20" y="782" width="374" height="31"/>
+                                                <color key="tintColor" red="0.48731268119999999" green="0.48083751400000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Add photo"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addPhoto:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HrU-Tg-VYs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="BuU-Gp-9sP" firstAttribute="leading" secondItem="Fpx-Ax-TLr" secondAttribute="leading" constant="20" id="Lb7-Ng-tqj"/>
+                                            <constraint firstAttribute="trailing" secondItem="BuU-Gp-9sP" secondAttribute="trailing" constant="20" id="Lu8-PR-l5D"/>
+                                            <constraint firstItem="rsp-iJ-Kpx" firstAttribute="top" secondItem="Fpx-Ax-TLr" secondAttribute="top" id="QDj-I5-N04"/>
+                                            <constraint firstAttribute="bottom" secondItem="BuU-Gp-9sP" secondAttribute="bottom" constant="5" id="iYt-5n-Dan"/>
+                                            <constraint firstItem="rsp-iJ-Kpx" firstAttribute="leading" secondItem="Fpx-Ax-TLr" secondAttribute="leading" id="qNc-ZC-Vu7"/>
+                                            <constraint firstAttribute="trailing" secondItem="rsp-iJ-Kpx" secondAttribute="trailing" id="tdr-7l-Fyf"/>
+                                            <constraint firstItem="BuU-Gp-9sP" firstAttribute="top" secondItem="rsp-iJ-Kpx" secondAttribute="bottom" constant="10" id="vMH-ER-I40"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Fpx-Ax-TLr" firstAttribute="centerY" secondItem="IUJ-yf-cFm" secondAttribute="centerY" id="QgP-4Q-6KJ"/>
+                                    <constraint firstItem="Fpx-Ax-TLr" firstAttribute="leading" secondItem="IUJ-yf-cFm" secondAttribute="leading" id="UvM-bQ-QmB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fpx-Ax-TLr" secondAttribute="bottom" id="Vgd-eW-Czj"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fpx-Ax-TLr" secondAttribute="trailing" id="YhA-6I-3xv"/>
+                                    <constraint firstItem="Fpx-Ax-TLr" firstAttribute="top" secondItem="IUJ-yf-cFm" secondAttribute="top" id="sdk-hh-RlG"/>
+                                    <constraint firstItem="Fpx-Ax-TLr" firstAttribute="centerX" secondItem="IUJ-yf-cFm" secondAttribute="centerX" id="t03-K0-YEk"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="IUJ-yf-cFm" secondAttribute="bottom" id="6F6-hH-MbZ"/>
+                            <constraint firstItem="IUJ-yf-cFm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="JXz-9E-TaM"/>
+                            <constraint firstItem="IUJ-yf-cFm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="K0b-3k-RMq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IUJ-yf-cFm" secondAttribute="trailing" id="OSX-8f-2f8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="rsp-iJ-Kpx" id="kc1-yt-Jzd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

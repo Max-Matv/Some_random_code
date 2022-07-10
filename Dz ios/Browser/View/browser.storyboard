@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Browser View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="browser" id="Y6W-OH-hqX" customClass="BrowserViewController" customModule="Dz_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Apc-Lc-Fht">
+                                <rect key="frame" x="0.0" y="107.5" width="414" height="754.5"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEZ-gE-L2d">
+                                <rect key="frame" x="0.0" y="44" width="414" height="63.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMy-F1-Hw5">
+                                        <rect key="frame" x="355.5" y="5" width="53.5" height="53.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="OMy-F1-Hw5" secondAttribute="height" multiplier="1:1" id="27u-2Q-ieg"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="reloadButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Unj-aH-um8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwl-g9-BaM">
+                                        <rect key="frame" x="297" y="5" width="53.5" height="53.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Jwl-g9-BaM" secondAttribute="height" multiplier="1:1" id="u3e-1a-HiB"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.48731268119999999" green="0.48083751400000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forwardButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ott-ON-fbb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZF-wn-oN9">
+                                        <rect key="frame" x="238.5" y="5" width="53.5" height="53.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="LZF-wn-oN9" secondAttribute="height" multiplier="1:1" id="ojw-Bo-mPi"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.48731268119999999" green="0.48083751400000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="backButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="35A-Ax-UyN"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s0n-oq-0tL">
+                                        <rect key="frame" x="5" y="5" width="228.5" height="53.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
+                                        <connections>
+                                            <action selector="editTextDidChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="onu-bp-PWj"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="s0n-oq-0tL" secondAttribute="bottom" constant="5" id="087-vF-9XB"/>
+                                    <constraint firstItem="Jwl-g9-BaM" firstAttribute="top" secondItem="GEZ-gE-L2d" secondAttribute="top" constant="5" id="0hC-mk-U0q"/>
+                                    <constraint firstItem="LZF-wn-oN9" firstAttribute="top" secondItem="GEZ-gE-L2d" secondAttribute="top" constant="5" id="1C8-ve-I2A"/>
+                                    <constraint firstAttribute="bottom" secondItem="LZF-wn-oN9" secondAttribute="bottom" constant="5" id="272-ca-0nA"/>
+                                    <constraint firstItem="OMy-F1-Hw5" firstAttribute="top" secondItem="GEZ-gE-L2d" secondAttribute="top" constant="5" id="5o5-Pu-7hv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jwl-g9-BaM" secondAttribute="bottom" constant="5" id="I93-ce-5xm"/>
+                                    <constraint firstItem="OMy-F1-Hw5" firstAttribute="leading" secondItem="Jwl-g9-BaM" secondAttribute="trailing" constant="5" id="N1m-2O-Syb"/>
+                                    <constraint firstItem="s0n-oq-0tL" firstAttribute="leading" secondItem="GEZ-gE-L2d" secondAttribute="leading" constant="5" id="bgR-tn-deU"/>
+                                    <constraint firstAttribute="trailing" secondItem="OMy-F1-Hw5" secondAttribute="trailing" constant="5" id="gnQ-Bs-2kQ"/>
+                                    <constraint firstItem="s0n-oq-0tL" firstAttribute="top" secondItem="GEZ-gE-L2d" secondAttribute="top" constant="5" id="tNZ-QB-aUC"/>
+                                    <constraint firstAttribute="bottom" secondItem="OMy-F1-Hw5" secondAttribute="bottom" constant="5" id="vvD-gf-4Jf"/>
+                                    <constraint firstItem="LZF-wn-oN9" firstAttribute="leading" secondItem="s0n-oq-0tL" secondAttribute="trailing" constant="5" id="wkJ-Yc-PPt"/>
+                                    <constraint firstItem="Jwl-g9-BaM" firstAttribute="leading" secondItem="LZF-wn-oN9" secondAttribute="trailing" constant="5" id="x2X-al-frW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Apc-Lc-Fht" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6GJ-2X-2vQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Apc-Lc-Fht" secondAttribute="bottom" id="CRU-FF-zna"/>
+                            <constraint firstItem="GEZ-gE-L2d" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="JAj-ln-m5Y"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GEZ-gE-L2d" secondAttribute="trailing" id="Wh5-kj-Zch"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Apc-Lc-Fht" secondAttribute="trailing" id="bPV-La-btx"/>
+                            <constraint firstItem="GEZ-gE-L2d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fAN-RO-CeN"/>
+                            <constraint firstItem="Apc-Lc-Fht" firstAttribute="top" secondItem="GEZ-gE-L2d" secondAttribute="bottom" id="sLO-VF-gz8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="s0n-oq-0tL" id="Wpr-LM-7h8"/>
+                        <outlet property="webView" destination="Apc-Lc-Fht" id="4bE-ec-ih4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="66"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

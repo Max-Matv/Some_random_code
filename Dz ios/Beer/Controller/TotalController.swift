@@ -27,13 +27,16 @@ class TotalController: UIViewController {
         let alertController = UIAlertController(title: "Хотите продолжить?", message: nil, preferredStyle: .alert)
         let action = UIAlertAction(title: "да", style: .default) { (action) in
             Bartender.shared.resetProceeds()
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "dzThree")
-            self.navigationController?.pushViewController(vc!, animated: true)
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "dzThree") {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
         }
         let cancel = UIAlertAction(title: "нет", style: .default) { (action) in
             Bartender.shared.resetAll()
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "main")
-            self.navigationController?.pushViewController(vc!, animated: true)
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "main") {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
         alertController.addAction(action)
         alertController.addAction(cancel)

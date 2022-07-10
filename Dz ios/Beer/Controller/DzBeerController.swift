@@ -15,11 +15,14 @@ class DzBeerController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         
+        setGradient(view: self.view)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         collectionView.reloadData()
     }
     
@@ -27,8 +30,10 @@ class DzBeerController: UIViewController {
         let alertController = UIAlertController(title: "Конец смены", message: "Завершить смену?", preferredStyle: .alert)
         let cancel = UIAlertAction(title: "cancel", style: .destructive)
         let action = UIAlertAction(title: "ok", style: .default) { (action) in
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "totalVc")
-            self.navigationController?.pushViewController(vc!, animated: true)
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "totalVc") {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
         }
         alertController.addAction(cancel)
         alertController.addAction(action)
@@ -51,6 +56,11 @@ extension DzBeerController: UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "beerCell", for: indexPath) as? BeerCell {
             cell.setupCell(beer: Bartender.shared.getBeer()[indexPath.row])
+            if cell.countLabel.text == "0" {
+                cell.countLabel.layer.borderColor = UIColor.red.cgColor
+            } else {
+                cell.countLabel.layer.borderColor = UIColor.black.cgColor
+            }
             return cell
         }
         return UICollectionViewCell()

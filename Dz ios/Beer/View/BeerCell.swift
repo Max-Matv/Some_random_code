@@ -15,6 +15,7 @@ class BeerCell: UICollectionViewCell {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var brandLabel: UILabel!
     
+    
     func setupCell(beer: Beer) {
         
         beerImage.image = UIImage(named: beer.image)
@@ -22,6 +23,8 @@ class BeerCell: UICollectionViewCell {
         brandLabel.text = beer.name
         countLabel.text = String(beer.count)
         priceLabel.text = "\(beer.price)$"
+        countLabel.layer.borderWidth = 2.0
+        priceLabel.layer.borderWidth = 2.0
     }
     
 }
